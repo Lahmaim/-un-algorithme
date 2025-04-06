@@ -1,0 +1,29 @@
+DEBUT
+
+    longueur ← 0
+    nb_mots ← 1
+    nb_voyelles ← 0
+
+    AFFICHER "Entrez une phrase se terminant par un point :"
+    
+    FAIRE
+        LIRE caractere
+        
+        longueur ← longueur + 1
+
+        SI caractere = ' ' ALORS
+            nb_mots ← nb_mots + 1
+        FIN SI
+
+        SI caractere EN ('a', 'e', 'i', 'o', 'u', 'y', 
+                         'A', 'E', 'I', 'O', 'U', 'Y') ALORS
+            nb_voyelles ← nb_voyelles + 1
+        FIN SI
+
+    TANT QUE caractere ≠ '.'
+
+    AFFICHER "Longueur de la phrase : ", longueur
+    AFFICHER "Nombre de mots : ", nb_mots
+    AFFICHER "Nombre de voyelles : ", nb_voyelles
+
+FIN
